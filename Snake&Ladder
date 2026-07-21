@@ -1,0 +1,46 @@
+import random
+p1=0
+p2=0
+while p1<=20 and p2<=20:
+  input("Press enter for P1 dice: ")
+  dice=random.randint(1,6)
+  print("dice value: ",dice)
+
+  p1 += dice
+
+  #ladder
+  if p1==8:
+      print("p1 go to ladder: ")
+      p1=15
+
+  #snake
+  if p1==17:
+      print("p1 go to snake: ")
+      p1=5
+  print("P1 position:", p1)
+
+  if p1>=20:
+      print("p1 won the game: ")
+      break
+
+
+  input("Press enter for P2 dice: ")
+  dice=random.randint(1,6)
+  print("dice value: ",dice)
+
+  p2+=dice
+
+  #ladder
+  if p2==8:
+      print("p2 go to ladder: ")
+      p2=15
+
+  #snake
+  if p2==18:
+        print("p2 go to snake")
+        p2=8
+  print("P2 position:", p2)
+
+  if p2>=20:
+            print("p2 won the game: ")
+            break
